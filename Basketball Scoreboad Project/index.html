@@ -11,23 +11,23 @@
     <div class="container">
       <div class="card">
         <h2>HOME</h2>
-        <div class="box">0</div>
+        <div class="box" id="home-box">0</div>
 
-        <div class="buttons">
-          <button>+1</button>
-          <button>+2</button>
-          <button>+3</button>
+        <div class="buttons" id="home-btn">
+          <button onclick="homeIncreaseCount(1)">+1</button>
+          <button onclick="homeIncreaseCount(2)">+2</button>
+          <button onclick="homeIncreaseCount(3)">+3</button>
         </div>
       </div>
 
       <div class="card">
         <h2>GUEST</h2>
-        <div class="box">0</div>
+        <div class="box" id="guest-btn">0</div>
 
         <div class="buttons">
-          <button>+1</button>
-          <button>+2</button>
-          <button>+3</button>
+          <button onclick="guestIncreaseCount(1)">+1</button>
+          <button onclick="guestIncreaseCount(2)">+2</button>
+          <button onclick="guestIncreaseCount(3)">+3</button>
         </div>
       </div>
     </div>

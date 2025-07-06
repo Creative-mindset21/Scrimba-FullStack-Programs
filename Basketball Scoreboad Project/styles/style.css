@@ -71,3 +71,8 @@ body {
   border-radius: 2px;
   cursor: pointer;
 }
+
+.green {
+  background: green;
+  color: var(--text-color);
+}
