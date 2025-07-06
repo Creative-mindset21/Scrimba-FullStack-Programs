@@ -16,6 +16,7 @@ function guestIncreaseCount(amount) {
   updateColor();
 }
 
+/* FUNCTION TO UPDATE THE COLOR OF THE WINNING TEAM */
 function updateColor() {
   if (parseInt(homeBox.textContent) > parseInt(guestBox.textContent)) {
     homeBox.classList.add("green");
@@ -29,3 +30,13 @@ function updateColor() {
     guestBox.classList.remove("green");
   }
 }
+
+/* BUTTON TO RESET THE SCORE */
+document.getElementById("new-game").addEventListener("click", () => {
+  homeCount = 0;
+  guestCount = 0;
+  homeBox.textContent = homeCount;
+  guestBox.textContent = guestCount;
+
+  updateColor();
+});

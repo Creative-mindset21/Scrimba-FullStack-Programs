@@ -31,11 +31,10 @@ body {
 .container {
   background: var(--bg-color);
   padding: 5rem;
-  display: flex;
+  columns: 2;
   gap: 5rem;
-  text-align: center;
   color: var(--text-color);
-  justify-content: space-between;
+  position: relative;
 }
 
 .card {
@@ -62,14 +61,25 @@ body {
   gap: 1rem;
 }
 
-.buttons button {
-  font-size: var(--fs-100);
+.buttons button,
+.new-game-btn {
   background: transparent;
   color: var(--button-color);
   border: 2px solid var(--button-color);
-  padding: 0.5rem;
-  border-radius: 2px;
   cursor: pointer;
+  border-radius: 2px;
+}
+
+.buttons button {
+  font-size: var(--fs-100);
+  padding: 0.5rem;
+}
+
+.new-game-btn {
+  position: absolute;
+  left: 43%;
+  bottom: 7%;
+  padding: 0.3rem 1rem;
 }
 
 .green {
