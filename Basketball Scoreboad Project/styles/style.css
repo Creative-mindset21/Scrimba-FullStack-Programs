@@ -26,15 +26,19 @@ body {
   justify-content: center;
   min-block-size: 100vh;
   font-family: sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url(../images/basketball-court.jpg);
+  background-size: cover;
 }
 
 .container {
-  background: var(--bg-color);
+  background: transparent;
   padding: 5rem;
   columns: 2;
   gap: 5rem;
   color: var(--text-color);
   position: relative;
+  backdrop-filter: blur(200px);
 }
 
 .card {
