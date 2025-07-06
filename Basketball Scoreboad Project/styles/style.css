@@ -6,13 +6,68 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* COLORS */
+  --bg-color: #1b244a;
+  --score-color: #f94f6d;
+  --text-color: #eee;
+  --button-color: #9aabd8;
+  --dark-color: #080001;
+
+  /* FONT SIZE */
+  --fs-300: 5.625rem;
+  --fs-200: 2.5rem;
+  --fs-100: 1.125rem;
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-block-size: 100vh;
+  font-family: sans-serif;
 }
 
 .container {
-  background: ;
+  background: var(--bg-color);
+  padding: 5rem;
+  display: flex;
+  gap: 5rem;
+  text-align: center;
+  color: var(--text-color);
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card h2 {
+  font-size: var(--fs-200);
+}
+
+.box {
+  background-color: var(--dark-color);
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+  color: var(--score-color);
+  font-size: var(--fs-300);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons button {
+  font-size: var(--fs-100);
+  background: transparent;
+  color: var(--button-color);
+  border: 2px solid var(--button-color);
+  padding: 0.5rem;
+  border-radius: 2px;
+  cursor: pointer;
 }
