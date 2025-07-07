@@ -73,6 +73,27 @@ h1 {
   margin-bottom: 4rem;
 }
 
+.options {
+  margin-block-end: 1rem;
+}
+
+.include-btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.include-btn > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.include-btn label {
+  font-size: 0.9rem;
+}
+
 .outputs {
   display: inline-flex;
   align-items: center;
@@ -98,5 +119,9 @@ h1 {
 
   .wrapper {
     padding: 4rem;
+  }
+
+  .include-btn {
+    gap: 0.3rem;
   }
 }

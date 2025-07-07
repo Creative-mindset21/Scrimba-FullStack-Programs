@@ -1,3 +1,6 @@
+const generateBtn = document.getElementById("generate-btn");
+const isNumbers = document.getElementById("numbers");
+const isSymbols = document.getElementById("symbols");
 const letters = [
   "A",
   "B",
@@ -52,6 +55,7 @@ const letters = [
   "y",
   "z",
 ];
+
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const symbols = [
   "~",
@@ -87,6 +91,18 @@ const symbols = [
 
 let password = "";
 
-function generateRandomNumber() {
-  for (let i = 0; i < 9; i++) console.log(i);
-}
+generateBtn.addEventListener("click", () => {
+  const selectedArray = [];
+
+  while (selectedArray.length < 9) {
+    selectedArray.push(letters[Math.floor(Math.random() * letters.length)]);
+
+    if (isNumbers.checked && selectedArray.length < 9) {
+      selectedArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+    }
+
+    if (isSymbols.checked && selectedArray.length < 9) {
+      selectedArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+    }
+  }
+});

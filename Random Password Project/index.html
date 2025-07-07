@@ -13,7 +13,21 @@
       <div class="text">
         <h1>Generate a <br /><span>random password</span></h1>
         <p>Never use an insecure password again.</p>
-        <button>Generate password</button>
+
+        <div class="options">
+          <div class="include-btn">
+            <div>
+              <input type="checkbox" name="symbols" id="symbols" />
+              <label for="symbols">Include Symbols</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="numbers" id="numbers" />
+              <label for="numbers">Include Numbers</label>
+            </div>
+          </div>
+        </div>
+        <button id="generate-btn">Generate password</button>
       </div>
 
       <div class="outputs">
