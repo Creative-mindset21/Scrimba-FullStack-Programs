@@ -3,6 +3,7 @@ const isNumbers = document.getElementById("numbers");
 const isSymbols = document.getElementById("symbols");
 const progressBar = document.getElementById("progress-bar");
 const progressLabel = document.getElementById("progress-label");
+const output1 = document.getElementById("output-1");
 
 const letters = [
   "A",
@@ -94,8 +95,8 @@ const symbols = [
 
 displayRange();
 
+//! FUNCTION TO DISPLAY THE ACTUAL RANGE WHEN LOADED
 function displayRange() {
-  /* FUNCTION TO DISPLAY THE ACTUAL RANGE WHEN LOADED */
   progressLabel.textContent = progressBar.value;
 }
 
@@ -103,8 +104,8 @@ progressBar.addEventListener("input", () => {
   displayRange();
 });
 
+// ! FUNCTION TO GENERATE RANDOM PASSWORDS
 function generateRandomPassword() {
-  /* FUNCTION TO GENERATE RANDOM PASSWORDS */
   let password = "";
   const selectedArray = [];
 
@@ -124,8 +125,19 @@ function generateRandomPassword() {
   return password;
 }
 
-/* UPDATE THE PASSWORD WHEN THE BUTTON IS CLICKED */
+//! UPDATE THE PASSWORD WHEN THE BUTTON IS CLICKED
 generateBtn.addEventListener("click", () => {
   document.getElementById("output-1").textContent = generateRandomPassword();
   document.getElementById("output-2").textContent = generateRandomPassword();
+});
+
+//! FUNCTION TO MAKE THE PASSWORD COPYABLE BY CLICKING
+
+output1.addEventListener("click", () => {
+  navigator.clipboard.writeText(output1.textContent);
+  document.getElementById("copy-message").textContent = "Text Copied";
+
+  setTimeout(() => {
+    document.getElementById("copy-message").textContent = "";
+  }, 2000);
 });
