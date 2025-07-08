@@ -1,6 +1,9 @@
 const generateBtn = document.getElementById("generate-btn");
 const isNumbers = document.getElementById("numbers");
 const isSymbols = document.getElementById("symbols");
+const progressBar = document.getElementById("progress-bar");
+const progressLabel = document.getElementById("progress-label");
+
 const letters = [
   "A",
   "B",
@@ -89,20 +92,40 @@ const symbols = [
   "/",
 ];
 
-let password = "";
+displayRange();
 
-generateBtn.addEventListener("click", () => {
+function displayRange() {
+  /* FUNCTION TO DISPLAY THE ACTUAL RANGE WHEN LOADED */
+  progressLabel.textContent = progressBar.value;
+}
+
+progressBar.addEventListener("input", () => {
+  displayRange();
+});
+
+function generateRandomPassword() {
+  /* FUNCTION TO GENERATE RANDOM PASSWORDS */
+  let password = "";
   const selectedArray = [];
 
-  while (selectedArray.length < 9) {
+  while (selectedArray.length < Number(progressBar.value)) {
     selectedArray.push(letters[Math.floor(Math.random() * letters.length)]);
 
-    if (isNumbers.checked && selectedArray.length < 9) {
+    if (isNumbers.checked && selectedArray.length < Number(progressBar.value)) {
       selectedArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
     }
 
-    if (isSymbols.checked && selectedArray.length < 9) {
+    if (isSymbols.checked && selectedArray.length < Number(progressBar.value)) {
       selectedArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
     }
   }
+
+  password = selectedArray.join("");
+  return password;
+}
+
+/* UPDATE THE PASSWORD WHEN THE BUTTON IS CLICKED */
+generateBtn.addEventListener("click", () => {
+  document.getElementById("output-1").textContent = generateRandomPassword();
+  document.getElementById("output-2").textContent = generateRandomPassword();
 });

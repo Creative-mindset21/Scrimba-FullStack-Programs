@@ -15,6 +15,20 @@
         <p>Never use an insecure password again.</p>
 
         <div class="options">
+          <div class="progress">
+            <input
+              type="range"
+              name="progress-bar"
+              id="progress-bar"
+              max="15"
+              min="1"
+              value="7"
+            />
+            <label for="progress-bar" name="progress-bar" id="progress-label"
+              >9</label
+            >
+          </div>
+
           <div class="include-btn">
             <div>
               <input type="checkbox" name="symbols" id="symbols" />
@@ -31,8 +45,8 @@
       </div>
 
       <div class="outputs">
-        <p></p>
-        <p></p>
+        <p id="output-1"></p>
+        <p id="output-2"></p>
       </div>
     </div>
     <!-- JS LINKING -->

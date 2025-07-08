@@ -47,7 +47,7 @@ h1 {
 
 .wrapper {
   background: var(--bg-color);
-  padding: 6rem 4rem;
+  padding: 4rem;
   color: var(--text-white);
   margin: 0 3rem;
 }
@@ -58,7 +58,7 @@ h1 {
 
 .text p {
   color: var(--secondary-color);
-  margin-block-end: 2rem;
+  margin-block-end: 1.5rem;
 }
 
 .text button {
@@ -71,10 +71,31 @@ h1 {
   border-radius: 5px;
   transition: var(--transition);
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 .options {
   margin-block-end: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.progress label {
+  font-size: 1rem;
+  color: var(--bg-color);
+  font-weight: bold;
+  background-color: var(--primary-color);
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-content: center;
 }
 
 .include-btn {
@@ -108,12 +129,17 @@ h1 {
   background: var(--output-color);
   width: 211px;
   height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 520px) {
   :root {
     /* FONT SIZE */
-    --fs-300: 1.5rem;
+    --fs-300: 1.3rem;
     --fs-200: 1.2rem;
   }
 
