@@ -9,43 +9,49 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <img src="./images/logo.png" alt="Logo Image" />
-      <img src="./images/user-avatar.png" alt="User Avatar Image" />
-    </header>
+    <div class="container">
+      <header class="pad">
+        <img src="./images/logo.png" alt="Logo Image" class="logo" />
+        <img
+          src="./images/user-avatar.png"
+          alt="User Avatar Image"
+          class="profile-img"
+        />
+      </header>
 
-    <main>
-      <div class="cards">
-        <div class="card">
-          <div class="profile-details">
-            <img
-              src="./images/avatar-vangogh.jpg"
-              alt="Avatar image of Vangogh"
-            />
+      <main>
+        <section class="cards">
+          <div class="card">
+            <div class="profile-details">
+              <img
+                src="./images/avatar-vangogh.jpg"
+                alt="Avatar image of Vangogh"
+              />
 
-            <div>
-              <h2>Vincent van Gogh</h2>
-              <p>Zudert, Netherlands</p>
+              <div>
+                <h2>Vincent van Gogh</h2>
+                <p>Zudert, Netherlands</p>
+              </div>
+            </div>
+
+            <img src="./images/post-vangogh.jpg" alt="Post Image of Vangogh" />
+
+            <div class="likes-comments">
+              <div class="icons">
+                <img src="./images/icon-heart.png" alt="Like Icon" />
+                <img src="./images/icon-dm.png" alt="Dm Icon" />
+                <img src="./images/icon-heart.png" alt="Heart Icon" />
+              </div>
+              <h3>21,492 likes</h3>
+
+              <div class="comments">
+                <p><span>vincey1853</span> just took a few mushrooms lol</p>
+              </div>
             </div>
           </div>
-
-          <img src="./images/post-vangogh.jpg" alt="Post Image of Vangogh" />
-
-          <div class="likes-comments">
-            <div class="icons">
-              <img src="./images/icon-heart.png" alt="Like Icon" />
-              <img src="./images/icon-dm.png" alt="Dm Icon" />
-              <img src="./images/icon-heart.png" alt="Heart Icon" />
-            </div>
-            <h3>21,492 likes</h3>
-
-            <div class="comments">
-              <p><span>vincey1853</span> just took a few mushrooms lol</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+        </section>
+      </main>
+    </div>
     <!-- JS LINKING -->
     <script src="script.js"></script>
   </body>
