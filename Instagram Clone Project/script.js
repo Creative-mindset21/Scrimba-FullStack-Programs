@@ -1,9 +1,10 @@
 import { posts } from "./data.js";
 
-let htmlString = "";
+function renderHTML(posts) {
+  let htmlString = "";
 
-posts.forEach((post) => {
-  htmlString += `
+  posts.forEach((post, index) => {
+    htmlString += `
     <div class="card">
         <div class="profile-details">
             <img
@@ -21,7 +22,7 @@ posts.forEach((post) => {
 
         <div class="likes-comments">
             <div class="icons">
-            <img src="./images/icon-heart.png" alt="Like Icon" />
+            <img src="./images/icon-heart.png" alt="Like Icon" class="like-button" data-index="${index}"/>
             <img src="./images/icon-dm.png" alt="Dm Icon" />
             <img src="./images/icon-heart.png" alt="Heart Icon" />
             </div>
@@ -33,6 +34,23 @@ posts.forEach((post) => {
         </div>
     </div>
     `;
-});
 
-document.getElementById("cards").innerHTML = htmlString;
+    document.getElementById("cards").innerHTML = htmlString;
+
+    updateLikes();
+  });
+}
+
+function updateLikes() {
+  const likeButtons = document.querySelectorAll(".like-button");
+
+  likeButtons.forEach((icon) => {
+    icon.addEventListener("click", (e) => {
+      const index = e.target.getAttribute("data-index");
+      posts[index].likes++;
+      renderHTML(posts);
+    });
+  });
+}
+
+renderHTML(posts);
