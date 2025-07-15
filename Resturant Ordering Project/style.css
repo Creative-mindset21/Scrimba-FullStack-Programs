@@ -1,0 +1,118 @@
+/* GOOGLE FONT LINKING */
+@import url("https://fonts.googleapis.com/css2?family=Smythe&display=swap");
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM STYLING */
+:root {
+  /* Colors */
+  --color-black: #000;
+  --color-grey: #8b8b8b;
+  --color-white: #fff;
+  --color-border: #dedede;
+
+  /* Font Size */
+  --fs-500: 2.4375rem;
+  --fs-400: 1.75rem;
+  --fs-300: 1.40125rem;
+  --fs-200: 1.25rem;
+  --fs-100: 1rem;
+}
+
+/* DEFAULTS FONTS */
+body {
+  font-family: "Smythe", serif;
+  display: flex;
+  align-items: center;
+  min-block-size: 100vh;
+  justify-content: center;
+  background: whitesmoke;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--fs-500);
+}
+
+h2 {
+  font-size: var(--fs-400);
+}
+
+small {
+  color: var(--color-grey);
+  font-size: var(--fs-100);
+}
+
+.wrapper {
+  min-inline-size: 37.5rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* HEADER SECTION */
+.header {
+  background: url("./background.jpg") no-repeat center;
+  background-size: cover;
+  height: 167px;
+  padding: 7%;
+  color: var(--color-white);
+}
+
+.header p {
+  font-size: var(--fs-300);
+}
+
+/* MAIN SECTION */
+main {
+  background: var(--color-white);
+  padding: 2.5rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.image {
+  font-size: 4.92rem;
+  transform: rotateY(180deg);
+  opacity: 0.72;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.text p {
+  font-size: var(--fs-200);
+}
+
+.card-right {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  font-size: 1.4rem;
+  font-weight: 200;
+  padding: 0.5rem;
+  border-radius: 100vmax;
+  display: grid;
+  place-content: center;
+}
