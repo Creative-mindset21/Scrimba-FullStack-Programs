@@ -18,14 +18,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
+    <div class="wrapper" id="wrapper">
+      <header
+        class="header"
+        role="img"
+        aria-label="Image of a burger and text saying Jimmy's Diner. The best burgers and pizzas in town."
+      >
         <h1>Jimmy’s Diner</h1>
         <p>The best burgers and pizzas in town.</p>
       </header>
 
-      <main>
+      <main class="main" id="main">
         <div class="cards" id="cards"></div>
+
+        <div class="order">
+          <h2>Your order</h2>
+
+          <div class="order-details" id="order-details"></div>
+
+          <button>Complete order</button>
+        </div>
       </main>
     </div>
 

@@ -17,12 +17,15 @@
   --color-grey: #8b8b8b;
   --color-white: #fff;
   --color-border: #dedede;
+  --color-remove: #bbbbbb;
+  --color-button: #16db99;
 
   /* Font Size */
   --fs-500: 2.4375rem;
   --fs-400: 1.75rem;
   --fs-300: 1.40125rem;
   --fs-200: 1.25rem;
+  --fs-150: 1.0625rem;
   --fs-100: 1rem;
 }
 
@@ -37,7 +40,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 400;
 }
 
@@ -49,13 +53,17 @@ h2 {
   font-size: var(--fs-400);
 }
 
+h3 {
+  font-size: var(--fs-150);
+}
+
 small {
   color: var(--color-grey);
   font-size: var(--fs-100);
 }
 
 .wrapper {
-  min-inline-size: 37.5rem;
+  min-inline-size: 37.5rem; /* Default size */
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -128,4 +136,71 @@ main {
   display: grid;
   place-content: center;
   cursor: pointer;
+}
+
+/* ========== ORDERS ========== */
+
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  display: none;
+}
+
+.order h2 {
+  align-self: center;
+}
+
+.order-details {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+
+.detail,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail p,
+.total p {
+  font-size: 1.25rem;
+}
+
+.detail-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.detail-left small {
+  color: var(--color-remove);
+  font-family: "Verdana", sans-serif;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.order button {
+  background: var(--color-button);
+  border: none;
+  color: var(--color-white);
+  padding: 1rem 4rem;
+  border-radius: 3px;
+  font-size: var(--fs-100);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .wrapper {
+    min-inline-size: 80%; /* For tablets and smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    min-inline-size: 90%; /* For mobile devices */
+  }
 }
