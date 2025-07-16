@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Creative Mindset" />
+    <meta name="description" content="A Color Scheme Generator" />
 
     <!-- CSS LINKING -->
     <link rel="stylesheet" href="style.css" />
@@ -20,6 +22,7 @@
             class="select-color"
           />
 
+          <label for="color-scheme">Color Scheme</label>
           <select name="color-scheme" id="color-scheme" class="color-scheme">
             <option value="monochrome">Monochrome</option>
             <option value="monochrome-dark">Monochrome-dark</option>
@@ -33,23 +36,24 @@
           <button id="color-btn" class="color-btn">Get color Scheme</button>
         </div>
 
-        <div class="boxs">
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
+        <div class="boxes">
+          <div class="box" aria-live="polite"></div>
+          <div class="box" aria-live="polite"></div>
+          <div class="box" aria-live="polite"></div>
+          <div class="box" aria-live="polite"></div>
+          <div class="box" aria-live="polite"></div>
         </div>
 
         <div class="values">
-          <p class="value">hello</p>
-          <p class="value">hello</p>
-          <p class="value">hello</p>
-          <p class="value">hello</p>
-          <p class="value">hello</p>
+          <p class="value" aria-live="polite"></p>
+          <p class="value" aria-live="polite"></p>
+          <p class="value" aria-live="polite"></p>
+          <p class="value" aria-live="polite"></p>
+          <p class="value" aria-live="polite"></p>
         </div>
       </div>
     </main>
+
     <!-- JS LINKING -->
     <script src="script.js"></script>
   </body>

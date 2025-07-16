@@ -4,6 +4,8 @@ const URL = "https://www.thecolorapi.com/scheme";
 const boxes = document.querySelectorAll(".box");
 const textValues = document.querySelectorAll(".value");
 
+generateColorScheme();
+
 document
   .getElementById("color-btn")
   .addEventListener("click", generateColorScheme);
@@ -19,8 +21,7 @@ function generateColorScheme() {
 
   fetch(`${URL}?${params}`).then((response) =>
     response.json().then((data) => {
-      const colors = data.colors;
-      colors.forEach((color, i) => {
+      data.colors.forEach((color, i) => {
         boxes[i].style.background = color.hex.value;
         textValues[i].textContent = color.hex.value;
       });
@@ -28,4 +29,14 @@ function generateColorScheme() {
   );
 }
 
-generateColorScheme();
+textValues.forEach((text, i) => {
+  text.addEventListener("click", () => {
+    navigator.clipboard.writeText(text.textContent);
+    alert(`${text.textContent} copied to clipboard`);
+  });
+
+  boxes[i].addEventListener("click", () => {
+    navigator.clipboard.writeText(text.textContent);
+    alert(`${text.textContent} copied to clipboard`);
+  });
+});

@@ -23,7 +23,10 @@
 }
 
 body {
-  background: red;
+  background: whitesmoke;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("./bg-color.jpg") no-repeat center;
+  background-size: cover;
   display: grid;
   place-content: center;
   min-height: 100vh;
@@ -35,8 +38,12 @@ button {
 }
 
 main {
-  background: var(--color-white);
+  background: transparent;
+  backdrop-filter: blur(140px);
   margin: 0 1rem;
+  box-shadow: 0 0 rgba(0, 0, 0, 1);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
 }
 
 label {
@@ -80,14 +87,14 @@ label {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.boxs,
+.boxes,
 .values {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
 
 /* BOXS */
-.boxs {
+.boxes {
   height: 25rem;
 }
 
@@ -95,10 +102,12 @@ label {
 .values {
   text-align: center;
   padding: 0.75rem 0;
+  font-size: var(--fs-100);
+  color: var(--color-white);
 }
 
-.values {
-  font-size: var(--fs-100);
+.value {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
