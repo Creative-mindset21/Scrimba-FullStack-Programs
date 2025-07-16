@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* UTILITY CLASSES */
+:root {
+  /* Color */
+  --color-white: #fff;
+  --color-button: hsl(217, 19%, 07%);
+  --color-select: #111827;
+  --color-border: #d1d5db;
+
+  /* Font size */
+  --fs-200: 1rem;
+  --fs-100: 0.75rem;
+}
+
+body {
+  background: red;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main {
+  background: var(--color-white);
+  margin: 0 1rem;
+}
+
+label {
+  position: absolute;
+  left: -30000%;
+}
+
+/* HEAD SECTION */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.select-color {
+  min-block-size: 2rem;
+  min-inline-size: 2rem;
+}
+
+.color-scheme {
+  min-inline-size: 12rem;
+  font-size: var(--fs-200);
+  padding-left: 0.3rem;
+}
+
+.color-btn {
+  font-size: var(--fs-100);
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-button);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* BOXS */
+.boxs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 25rem;
+  gap: 0.3rem;
+}
+
+.box {
+  background-color: blue;
+}
+
+@media screen and (min-width: 1024px) {
+  .color-scheme {
+    min-inline-size: 312px;
+  }
+
+  .color-btn {
+    padding: 0.5rem 1rem;
+  }
+}
