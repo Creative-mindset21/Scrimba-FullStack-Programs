@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM STYLING */
+:root {
+  /* COLORS */
+  --color-text: #fff;
+  --color-gradient: linear-gradient(#d6c7ff, #ab8bff);
+  --color-placeholder: #a8b5db;
+  --color-numbers: #cecefb1a;
+  --color-grey: #9ca4ab;
+  --color-bg: #030014;
+
+  /* FONT SIZE */
+  --fs-900: 8.75rem;
+  --fs-800: 3.5rem;
+  --fs-700: 1.25rem;
+  --fs-600: 1rem;
+}
