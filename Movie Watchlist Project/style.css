@@ -1,3 +1,7 @@
+/** GOOGLE FONT LINKING */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/** RESET TO DEFAULTS */
 *,
 *::before,
 *::after {
@@ -6,19 +10,240 @@
   box-sizing: border-box;
 }
 
-/* CUSTOM STYLING */
+/** CUSTOM STYLING */
 :root {
-  /* COLORS */
+  /** COLORS */
   --color-text: #fff;
   --color-gradient: linear-gradient(#d6c7ff, #ab8bff);
   --color-placeholder: #a8b5db;
   --color-numbers: #cecefb1a;
   --color-grey: #9ca4ab;
   --color-bg: #030014;
+  --color-input: #0f0d23;
+  --color-icon: #ab8bff;
+  --color-border-num: #cecefb66;
+  --color-card-gradient: rgba(206, 206, 251, 0.02);
 
-  /* FONT SIZE */
+  /** FONT SIZE */
   --fs-900: 8.75rem;
   --fs-800: 3.5rem;
-  --fs-700: 1.25rem;
-  --fs-600: 1rem;
+  --fs-700: 1.875rem;
+  --fs-600: 1.25rem;
+  --fs-500: 1rem;
+}
+
+/** GENERAL STYLING */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "DM Sans";
+}
+
+img {
+  inline-size: 100%;
+  object-fit: cover;
+  display: block;
+  height: auto;
+}
+
+h1 {
+  font-size: var(--fs-800);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: var(--fs-700);
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+span {
+  background: var(--color-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+label {
+  position: absolute;
+  left: -9999%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: var(--color-input);
+  cursor: pointer;
+  box-shadow: inset 0 12px 32px var(--color-card-gradient),
+    inset 0 12px 32px var(--color-card-gradient);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  --color-card-gradient: rgba(206, 206, 251, 0.08);
+}
+
+/** HEADER STYLING */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./assets/hero-bg.png") no-repeat center;
+  inline-size: 100%;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3.125rem;
+  max-inline-size: 600px;
+  margin-inline: 2rem;
+}
+
+.img {
+  max-inline-size: 25.46625rem;
+}
+
+.input {
+  inline-size: 100%;
+  position: relative;
+}
+
+.input input {
+  inline-size: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-input);
+  border-color: transparent;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  outline: none;
+}
+
+.input input:is(:focus-visible, :hover) {
+  border: 1px solid var(--color-icon);
+}
+
+.input input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.input i {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 20px;
+  color: var(--color-icon);
+  font-size: 0.8rem;
+}
+
+/*! MAIN CONTAINER STYLING */
+.main-container {
+  max-inline-size: 85%;
+  margin-inline: auto;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+}
+
+/* * Trending Secton */
+.trending-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(107px, 1fr));
+  gap: 6rem;
+}
+
+.trending-card {
+  position: relative;
+}
+
+.content img {
+  max-width: 107px;
+  border-radius: 10px;
+}
+
+.texts {
+  display: none;
+}
+
+.texts.popular {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ratings {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.star {
+  inline-size: 1.2rem;
+}
+
+.number {
+  font-size: var(--fs-900);
+  color: var(--color-numbers);
+  -webkit-text-stroke: 2px var(--color-border-num);
+  text-stroke: 2px var(--color-border-num);
+  position: absolute;
+  top: -15%;
+  z-index: -1;
+  left: -60px;
+  font-weight: 900;
+  margin-top: 0.5rem;
+}
+
+.trending-card:where(:first-child) .number {
+  left: -40px;
+}
+
+/* * Popular Section */
+
+.popular-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --fs-800: 1.75rem;
+  }
+
+  .main-container {
+    padding-inline: 0.5rem;
+  }
+
+  .input input {
+    inline-size: 100%;
+    font-size: 0.8rem;
+  }
+
+  .texts {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  .trending-cards {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .trending-card img {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .number {
+    display: none;
+  }
 }
