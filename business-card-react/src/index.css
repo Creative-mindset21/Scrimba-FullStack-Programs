@@ -22,6 +22,7 @@
   --btn-color: rgba(55, 65, 81, 1);
   --wrapper-bg: rgba(26, 27, 33, 1);
   --footer-bg: rgba(22, 22, 25, 1);
+  --footer-svg-color: rgba(145, 142, 155, 1);
 
   --fs-400: 1.5625rem;
   --fs-300: 1rem;
@@ -126,4 +127,21 @@ body {
   padding-block: 1.5rem;
   padding-left: 2rem;
   gap: 1.5rem;
+}
+
+/*! FOOTER SECTION  */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background: var(--footer-bg);
+  padding: 1.5rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--footer-svg-color);
 }
