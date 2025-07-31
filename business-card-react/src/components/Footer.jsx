@@ -9,10 +9,31 @@ import {
 const Footer = () => {
   return (
     <footer className="footer">
-      <FaTwitterSquare />
-      <FaFacebookSquare />
-      <FaInstagramSquare />
-      <FaGithubSquare />
+      <ul>
+        <li>
+          <a href="#">
+            <FaTwitterSquare />
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <FaFacebookSquare />
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <FaInstagramSquare />
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <FaGithubSquare />
+          </a>
+        </li>
+      </ul>
     </footer>
   );
 };
