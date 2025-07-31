@@ -21,6 +21,7 @@
   --link-btn-color: rgba(80, 147, 226, 1);
   --btn-color: rgba(55, 65, 81, 1);
   --wrapper-bg: rgba(26, 27, 33, 1);
+  --footer-bg: rgba(22, 22, 25, 1);
 
   --fs-400: 1.5625rem;
   --fs-300: 1rem;
@@ -38,11 +39,20 @@ h1 {
 h2 {
   font-size: 1rem;
   color: var(--h2-color);
+  margin-bottom: 0.5rem;
 }
 
 p {
   font-size: var(--fs-100);
   color: var(--p-color);
+  max-inline-size: 247px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 .btn {
@@ -69,17 +79,26 @@ body {
   min-block-size: 100vh;
   font-family: "Inter", sans-serif;
   color: var(--text-color);
+  margin-inline: 2rem;
+}
+
+.header,
+.main {
+  background: var(--wrapper-bg);
+}
+
+.texts,
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 /*! HEADER SECTION */
 .header {
   text-align: center;
-  background: var(--wrapper-bg);
 }
 
 .texts {
-  display: flex;
-  flex-direction: column;
   gap: 0.3rem;
   padding-block: 1rem;
 }
@@ -94,9 +113,17 @@ body {
   justify-content: center;
   gap: 1.1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .linkedin.btn {
   background: var(--link-btn-color);
   color: var(--text-color);
+}
+
+/*! MAIN SECTION */
+.main {
+  padding-block: 1.5rem;
+  padding-left: 2rem;
+  gap: 1.5rem;
 }
